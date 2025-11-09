@@ -44,7 +44,7 @@ jobs:
             sudo apt install docker.io -y
             sudo apt install awscli -y
             aws ecr get-login-password --region eu-north-1 | \
-              sudo docker login --username AWS --password-stdin $REGISTRY
+              sudo docker login --username AWS --password-stdin $REGISTRY > /dev/null 2>&1
             sudo docker stop myappcontainer || true
             sudo docker rm myappcontainer || true
             sudo docker pull $REGISTRY/$REPOSITORY:$IMAGE_TAG
