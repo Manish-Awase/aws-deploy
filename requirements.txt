@@ -1,0 +1,10 @@
+scikit-learn ==1.7.2
+streamlit 
+pandas
+numpy
+joblib
+xgboost==2.0.3
+requests
+pydantic
+fastapi[standard]
+uvicorn[standard]
